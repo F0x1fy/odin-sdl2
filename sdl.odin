@@ -340,6 +340,8 @@ foreign lib {
 	@(link_name="SDL_LogSetPriority") log_set_priority :: proc(category: Log_Category, priority: Log_Priority)																													---;
 	@(link_name="SDL_LogVerbose") log_verbose :: proc(category: Log_Category, fmt: ..cstring)																																---;
 	@(link_name="SDL_LogWarn") log_warn :: proc(category: Log_Category, fmt: ..cstring)																																---;
+    @(link_name="SDL_BlitSurface") blit_surface :: proc(src: ^Surface, srcrect: ^Rect, dst: ^Surface, dstrect: ^Rect) -> i32 ---;
+    @(link_name="SDL_BlitScaled") blit_scaled :: proc(src: ^Surface, srcrect: ^Rect, dst: ^Surface, dstrect: ^Rect) -> i32 ---;
 	@(link_name="SDL_LowerBlit") lower_blit :: proc(src: ^Surface, srcrect: ^Rect, dst: ^Surface, dstrect: ^Rect) -> i32																					---;
 	@(link_name="SDL_LowerBlitScaled") lower_blit_scaled :: proc(src: ^Surface, srcrect: ^Rect, dst: ^Surface, dstrect: ^Rect) -> i32																					---;
 	@(link_name="SDL_MapRGB") map_rgb :: proc(format: ^Pixel_Format, r, g, b: u8) -> u32																												---;
